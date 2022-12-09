@@ -1,4 +1,3 @@
-
 *{
     margin: 0%;
     padding: 0%;
@@ -8,42 +7,55 @@
 }
 
 header{
-    background-color: whitesmoke;
-    height: 10vh;
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+}
+.galeriaPort{
+    margin-top: 3%;
+    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 3%;
+}
+.imgPort{
+   
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    
+}
+main{
+    background-color:white; 
+}
+nav{
+    width: 70%;
+    
+}
+.logo{
+    width: 220px;
+    height: 110px;
+}
+ul :hover{
+    color: black;
+    font-weight: 800;
+}
+ul{
+    padding-left: 70%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.logoHeader{
-    display: flex;
-    margin-inline-end: 50%;
-    width: 15vw;
-}
-.listNav{
-    
-    display: flex;
-    width: 100%;
-}
-.nav1{
-    width: 50vw;
-}
-
-.itemList{
-    cursor:pointer;
-    font-size:larger;
-    margin: 2%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.itemList2{
-    margin: 2%;
-    cursor: pointer;
-    font-size: larger;
-    width: 100%;
-    display: flex;
-    font-weight: bolder;
-    justify-content: space-between;
+li{
+    list-style: none;
+    font-size: 1.2rem
 }
 
 .section1{
@@ -57,59 +69,164 @@ header{
 }
 
 .text1{
-    width: 50%;
-    margin-top: 17%;
-    margin-left: 12%;
+    padding-top: 20%;
+    width: 70%;
+    margin-left: 5%;
     font-size: larger;
-    color: whitesmoke;
-    font-size: 60px;
+    color: white;
+    font-size: 80px;
     font-weight: 800;
 }
 .text2{
     margin-top: 2%;
     width: 50%;
-    margin-left: 12%;
+    margin-left: 5%;
     text-transform: uppercase;
-    color: whitesmoke;
+    color: white;
     font-size: 20px;
     font-variant: small-caps;
 }
-.section2{
-    grid-gap: 20px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 3%;
-}
-
 footer{
     width: 100%;
     height: 10vh;
     display: flex;
     background-color: whitesmoke;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+   
 }
 .redeSocial{
    
-    width: 30%;
-    margin-left: 6%;
+    width: 20%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 30px;
     cursor: pointer;
 }
 .text3{
     width: 46%;
     font-size: 20px;
+    font-weight: 800;
 }
 .div2{
-    margin-left: 10%;
-    margin-right: 20%;
     display:flex;
     align-items: center;
-    justify-content: space-around;
-    
+    justify-content: space-around;   
+}
+p{
+    padding-right: 15%;
+
+}
+
+
+
+/*responsivo - mobile*/
+@media(min-width: 201px) and (max-width: 500px){
+
+    header{
+        position: fixed;
+        left: 0;
+        top:0;
+        width: 100%;
+        background-image: url("./img/menu.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-left: 20%;
+        height: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .logo{
+        width: 160px;
+        display: flex; 
+        flex-direction: column;
+    }
+    main{
+        width: 100%;
+    }
+    .text1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-top: 90px;
+        padding-top: 20px; 
+        font-size: 40px;
+    }
+    .text2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-top: 20px;
+        font-size: 12px;
+    }
+    ul{
+        display: none;
+    }
+    .section1{
+        width: 100%;
+        height: 70vh;
+        text-align: left;
+        display: flex;
+        padding-top: 40%;
+        flex-direction: column;
+        background-position:right;
+        background-size:cover;
+    }
+    .galeriaPort{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imgPort{
+        width: 90%;
+    }
+    footer{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items:center;
+        flex-direction: column;
+    }
+    .redeSocial{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 90%;
+        height: 4vh;
+        background-color: aqua;
+    }
+    .redeSocial img{
+        width: 20px;
+        height: 22px;
+    }
+    .div2{
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: left;
+        padding-left: 6%;
+    }
+    .text3{
+        font-size: 12px;
+        text-align: left;
+        padding-right: 100%;
+    }
+    p{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        font-size: 12px;
+        text-align:left;    
+    }
+
 }
